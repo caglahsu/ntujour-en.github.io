@@ -257,7 +257,6 @@ section { padding: 5rem 1rem; }
   font-size: 1rem;
   color: var(--text-500);
   margin-top: 0.8rem;
-  max-width: 640px;
   line-height: 1.6;
 }
 
@@ -284,7 +283,8 @@ section { padding: 5rem 1rem; }
 
 .intro-pillars {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
   gap: 1rem;
 }
 
@@ -556,7 +556,7 @@ footer { background: var(--maroon-dark); }
 .footer-cols {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  gap: 1rem;
   padding-bottom: 3rem;
 }
 
@@ -581,7 +581,7 @@ footer { background: var(--maroon-dark); }
   color: rgba(255,255,255,0.6);
   margin-top: 1rem;
   line-height: 1.65;
-  max-width: 300px;
+  max-width: 600px;
 }
 
 .footer-col h4 {
