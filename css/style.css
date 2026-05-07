@@ -155,73 +155,6 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.1);
 }
 
-
-/* ============================================================
-   HERO
-   ============================================================ */
-
-.hero {
-  background: linear-gradient(140deg, var(--maroon-dark) 0%, var(--maroon) 55%, #8b2020 100%);
-  color: white;
-  padding: 5rem 1rem 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -100px; right: -80px;
-  width: 500px; height: 500px;
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -120px; left: -60px;
-  width: 380px; height: 380px;
-  border: 1px solid rgba(255,255,255,0.04);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative; z-index: 1;
-}
-
-.hero-tag {
-  font-family: -apple-system, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.1rem;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
-  max-width: 580px;
-}
-
-.hero-desc {
-  font-size: 1.05rem;
-  opacity: 0.82;
-  max-width: 500px;
-  font-family: -apple-system, sans-serif;
-  font-weight: 300;
-  line-height: 1.65;
-}
-
-
 /* ============================================================
    SECTIONS — shared
    ============================================================ */
@@ -257,7 +190,6 @@ section { padding: 5rem 1rem; }
   font-size: 1rem;
   color: var(--text-500);
   margin-top: 0.8rem;
-  max-width: 640px;
   line-height: 1.6;
 }
 
@@ -284,8 +216,9 @@ section { padding: 5rem 1rem; }
 
 .intro-pillars {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .pillar {
@@ -479,7 +412,7 @@ section { padding: 5rem 1rem; }
 
 .faculty-photo-wrap {
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   background: var(--bg-alt);
 }
@@ -664,7 +597,7 @@ footer { background: var(--maroon-dark); }
 }
 
 .profile-photo-wrap {
-  width: 160px; height: 200px;
+  width: 160px; height: 300px;
   border-radius: 6px;
   overflow: hidden;
   border: 3px solid rgba(255,255,255,0.25);
@@ -829,6 +762,80 @@ footer { background: var(--maroon-dark); }
   border: 1px solid var(--border);
   color: var(--text-500);
   margin: 0.25rem 0.25rem 0 0;
+}
+
+
+/* ============================================================
+   FACULTY — SECTION HEADINGS & COMPACT CARDS
+   ============================================================ */
+
+.faculty-section-heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-900);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.faculty-section-heading.heading-fulltime {
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  margin-top: 0;
+}
+
+.faculty-section-heading.heading-remembrance {
+  color: var(--text-700);
+  border-bottom-color: #d1d5db;
+}
+
+.faculty-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.faculty-compact-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--maroon);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.9rem 1rem;
+}
+
+.faculty-compact-card.card-remembrance {
+  border-left-color: var(--text-500);
+}
+
+.faculty-compact-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--maroon);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.faculty-compact-card.card-remembrance .faculty-compact-name {
+  color: var(--text-700);
+}
+
+.faculty-compact-title {
+  font-family: -apple-system, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-700);
+  margin-bottom: 0.2rem;
+}
+
+.faculty-compact-sub {
+  font-family: -apple-system, sans-serif;
+  font-size: 0.76rem;
+  color: var(--text-500);
+  line-height: 1.45;
 }
 
 

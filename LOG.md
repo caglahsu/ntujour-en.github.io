@@ -66,6 +66,42 @@
 
 ---
 
+## [2026-05-07 ~16:00 TST] — Expand Faculty section with additional categories
+
+**Prompt summary:**
+> 「請幫我修改 index.html，我希望在 faculty 的階段，可以將標題「Full-Time Faculty」放大一點，且接續幫我加上 adjunct faculty, adjunct specialist faculty, professor emeritus, joint appointment, rememberance，新加的內容不用額外的頁面，簡短介紹這些老師就好。名單請參考：https://webpageprodvm.ntu.edu.tw/Journalism/faculty.htm」
+
+**Actions taken:**
+- Fetched faculty data from NTU official pages: `adjunct.htm`, `practical-faculty.htm`, `emeritus-professor.htm`, `jointly-appointed-professor.htm`, `remembrance.htm`.
+- Added new CSS classes to `css/style.css`: `.faculty-section-heading`, `.heading-fulltime`, `.heading-remembrance`, `.faculty-compact-grid`, `.faculty-compact-card`, `.card-remembrance`, `.faculty-compact-name`, `.faculty-compact-title`, `.faculty-compact-sub`.
+- Updated `index.html` Faculty section:
+  - Changed "Full-Time Faculty" label from `.faculty-label` to a larger `<h3 class="faculty-section-heading heading-fulltime">`.
+  - Added 5 new subsections with compact card grids:
+    - **Adjunct Faculty** (3 members): Tai-Li Wang, Shuen-Xiao Chen, Lin-Lin Ku
+    - **Adjunct Specialist Faculty** (13 members): Li, Liang, Lee, Lee, Huang, Yang, Liou, Cheng, Shiau, Zhang, Huang, Fang, Wu
+    - **Professor Emeritus** (1 member): Chin-Hua Chang
+    - **Jointly Appointed Faculty** (2 members): Ching-Yi Liu, Hui-Chieh Su
+    - **In Remembrance** (2 members): Rou-Jin Chen, Yen-Yuan Ni
+
+**Files modified:** `css/style.css`, `index.html`
+
+---
+
+## [2026-05-07 ~16:15 TST] — Remove Hero, remove news links, delete first news item
+
+**Prompt summary:**
+> 「請幫我 1. 把 HERO 刪掉 2. news 不要有任何的 href 3. news的第一條 2026 entrance刪掉」
+
+**Actions taken:**
+- Deleted the `<!-- HERO -->` section (`<div class="hero">`) from `index.html`.
+- Changed all 5 `<a class="news-card" href="...">` elements to `<div class="news-card">` (removed all `href`, `target`, `rel` attributes).
+- Deleted the first news card "2026 Entrance Examination and Admissions Brochure".
+- Synced `index.html` to main repo folder.
+
+**Files modified:** `index.html`
+
+---
+
 <!-- Template for future entries:
 
 ## [YYYY-MM-DD HH:MM TST] — Short title
